@@ -226,9 +226,10 @@ $(DOCDIR):
 	mkdir -p $@
 
 gendoc: ensure-dirs $(DOCDIR)
+	mkdir -p $(DOCDIR)/overviews; \
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
 	rm -f $(DOCDIR)/README.md ; \
-	$(RUN) linkml generate doc ${GEN_DARGS} $(SOURCE_SCHEMA_PATH) -d $(DOCDIR) --template-directory $(TEMPLATEDIR) --use-slot-uris --use-class-uris --include src/mixs/schema/deprecated.yaml
+	$(RUN) linkml generate doc ${GEN_DARGS} $(SOURCE_SCHEMA_PATH) -d $(DOCDIR) --template-directory $(TEMPLATEDIR) --use-slot-uris --use-class-uris --include src/mixs/schema/deprecated.yaml --subfolder-type-separation
 	$(RUN) generate-term-list --output-file $(TERM_LIST_FILE)
 	$(RUN) generate-combinations --output-file $(COMBINATIONS_FILE)
 	$(RUN) generate-enumerations --output-file $(ENUMERATIONS_FILE)

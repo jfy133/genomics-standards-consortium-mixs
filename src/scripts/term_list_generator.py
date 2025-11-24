@@ -10,22 +10,28 @@ logger = logging.getLogger(__name__)
 
 
 @click.command()
-@click.option('--output-file', '-o',
-              default='docs/term_list.md',
-              help='Output Markdown file for term list documentation')
-@click.option('--schema-file', '-s',
-              default='src/mixs/schema/mixs.yaml',
-              help='Input MIxS schema YAML file')
+@click.option(
+    "--output-file",
+    "-o",
+    default="docs/overviews/term_list.md",
+    help="Output Markdown file for term list documentation",
+)
+@click.option(
+    "--schema-file",
+    "-s",
+    default="src/mixs/schema/mixs.yaml",
+    help="Input MIxS schema YAML file",
+)
 def generate_term_list(output_file, schema_file):
-
     """Generate Markdown documentation of all terms in MIxS schema."""
-    
+
     docgen = DocGenerator(
         schema_file,
         template_directory="src/doc-templates",
         directory="docs",
         use_slot_uris=True,
         use_class_uris=True,
+        subfolder_type_separation=True,
     )
     terms = list(docgen.all_slot_objects())
 
@@ -49,5 +55,5 @@ def generate_term_list(output_file, schema_file):
         logger.error(f"Error writing to '{output_file}': {str(e)}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_term_list()

@@ -10,22 +10,28 @@ logger = logging.getLogger(__name__)
 
 
 @click.command()
-@click.option('--output-file', '-o',
-              default='docs/enumerations.md',
-              help='Output Markdown file for enumerations documentation')
-@click.option('--schema-file', '-s',
-              default='src/mixs/schema/mixs.yaml',
-              help='Input MIxS schema YAML file')
+@click.option(
+    "--output-file",
+    "-o",
+    default="docs/overviews/enumerations.md",
+    help="Output Markdown file for enumerations documentation",
+)
+@click.option(
+    "--schema-file",
+    "-s",
+    default="src/mixs/schema/mixs.yaml",
+    help="Input MIxS schema YAML file",
+)
 def generate_enumerations(output_file, schema_file):
-
     """Generate Markdown documentation of all enumerations in MIxS schema."""
-    
+
     docgen = DocGenerator(
         schema_file,
         template_directory="src/doc-templates",
         directory="docs",
         use_slot_uris=True,
         use_class_uris=True,
+        subfolder_type_separation=True,
     )
     enums = list(docgen.all_enum_objects())
 
@@ -47,5 +53,5 @@ def generate_enumerations(output_file, schema_file):
         logger.error(f"Error writing to '{output_file}': {str(e)}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     generate_enumerations()

@@ -1,5 +1,5 @@
 ---
-site_name: "mixs"
+site_name: "MIxS Documentation"
 theme:
   name: material
   # palette:
@@ -20,15 +20,15 @@ extra_javascript:
   - javascripts/tablesort.js
 nav:
   # - Home: home.md
+  - About MIxS: about.md
   - Index: index.md
-  - Full term table: term_list.md
-  - Combinations: combinations.md
-  - Enumerations: enumerations.md
+  - Full term table: overviews/term_list.md
+  - Combinations: overviews/combinations.md
+  - Enumerations: overviews/enumerations.md
 site_url: https://GenomicsStandardsConsortium.github.io/mixs
 repo_url: https://github.com/GenomicsStandardsConsortium/mixs
 
 docs_dir: docs
-
 # Uncomment this block to enable use of Google Analytics.
 # Replace the property value with your own ID.
 # extra:
