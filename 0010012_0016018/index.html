@@ -502,7 +502,7 @@
 </tr>
 <tr>
 <td><a href="https://w3id.org/mixs/0000024">MIXS:0000024</a></td>
-<td><a href="../0000024/">estimated_size</a></td>
+<td><a href="../0000024/">estimated_genome_size</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The estimated size of the genome prior to sequencing</td>
 </tr>
@@ -1714,6 +1714,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1890,6 +1891,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2023,6 +2025,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2136,6 +2139,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2177,6 +2181,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2222,6 +2227,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2243,8 +2249,8 @@ attributes:
       syntax: ^{scientific_float}( *- *{scientific_float})? *{text}$
       interpolated: true
       partial_match: true
-  estimated_size:
-    name: estimated_size
+  estimated_genome_size:
+    name: estimated_genome_size
     annotations:
       Expected_value:
         tag: Expected_value
@@ -2252,7 +2258,9 @@ attributes:
     description: The estimated size of the genome prior to sequencing. Of particular
       importance in the sequencing of (eukaryotic) genome which could remain in draft
       form for a long or unspecified period
-    title: estimated size
+    title: estimated genome size
+    comments:
+    - Slot updated 2026-02-10 `estimated_size` and title 'estimated size'
     examples:
     - value: 300000 bp
     in_subset:
@@ -2262,7 +2270,7 @@ attributes:
     - size
     string_serialization: '{integer} bp'
     slot_uri: MIXS:0000024
-    alias: estimated_size
+    alias: estimated_genome_size
     owner: MiuvigAgriculture
     domain_of:
     - MigsBa
@@ -2306,6 +2314,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2347,6 +2356,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2464,6 +2474,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2530,6 +2541,7 @@ attributes:
     alias: biotic_relationship
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsVi
@@ -2681,6 +2693,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2800,6 +2813,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2982,6 +2996,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3085,6 +3100,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3122,6 +3138,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3232,6 +3249,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3277,6 +3295,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3376,6 +3395,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3414,6 +3434,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3451,6 +3472,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3492,6 +3514,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3527,6 +3550,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3568,6 +3592,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3613,6 +3638,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3662,6 +3688,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3734,6 +3761,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -4173,6 +4201,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -4212,6 +4241,7 @@ attributes:
     owner: MiuvigAgriculture
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -5969,6 +5999,7 @@ attributes:
     alias: isol_growth_condt
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -6370,6 +6401,7 @@ attributes:
     alias: trophic_level
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MimarksC
@@ -6450,6 +6482,7 @@ attributes:
     alias: pcr_primers
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MimarksC
     - MimarksS
     - Agriculture
@@ -6473,6 +6506,7 @@ attributes:
     alias: target_gene
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MimarksC
     - MimarksS
     - Agriculture
@@ -6494,6 +6528,7 @@ attributes:
     alias: target_subfragment
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MimarksC
     - MimarksS
     - Agriculture
@@ -6524,6 +6559,7 @@ attributes:
     alias: pcr_cond
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MimarksC
     - MimarksS
     - Agriculture
@@ -6551,6 +6587,7 @@ attributes:
     alias: seq_quality_check
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MimarksC
     - MimarksS
     - Agriculture
@@ -6572,6 +6609,7 @@ attributes:
     alias: chimera_check
     owner: MiuvigAgriculture
     domain_of:
+    - MimarksCMisip
     - MimarksC
     - MimarksS
     - Agriculture

@@ -655,6 +655,18 @@
 <td>Can a 16S gene be recovered from the submitted SAG or MAG?</td>
 </tr>
 <tr>
+<td><a href="https://w3id.org/mixs/0001354">MIXS:0001354</a></td>
+<td><a href="../0001354/">marker_gene_recov</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>Recovery status of taxonomic marker genes from the assembled genome</td>
+</tr>
+<tr>
+<td><a href="https://w3id.org/mixs/0001355">MIXS:0001355</a></td>
+<td><a href="../0001355/">marker_gene_recov_sw</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Tools used for taxonomic marker gene extraction from assembled genomes</td>
+</tr>
+<tr>
 <td><a href="https://w3id.org/mixs/0001322">MIXS:0001322</a></td>
 <td><a href="../0001322/">pos_cont_type</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
@@ -842,6 +854,8 @@ slots:
 - annot
 - x16s_recover_software
 - x16s_recover
+- marker_gene_recov
+- marker_gene_recov_sw
 - pos_cont_type
 - feat_pred
 - compl_software
@@ -1095,6 +1109,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1241,6 +1256,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1387,6 +1403,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1518,6 +1535,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1558,6 +1576,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1602,6 +1621,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1705,6 +1725,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1746,6 +1767,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1831,6 +1853,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - Mimag
     - MimarksC
@@ -1904,6 +1927,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2117,6 +2141,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2236,6 +2261,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2406,6 +2432,61 @@ attributes:
     - Mimag
     - Misag
     range: boolean
+  marker_gene_recov:
+    name: marker_gene_recov
+    description: Recovery status of taxonomic marker genes from the assembled genome
+    title: taxonomic marker gene recovered
+    examples:
+    - value: 'true'
+    in_subset:
+    - sequencing
+    from_schema: https://w3id.org/mixs
+    see_also:
+    - MIXS:0000065
+    aliases:
+    - x16s_recover
+    keywords:
+    - recover
+    - marker gene
+    - taxonomy
+    slot_uri: MIXS:0001354
+    alias: marker_gene_recov
+    owner: Mimag
+    domain_of:
+    - Mimag
+    - Misag
+    range: boolean
+  marker_gene_recov_sw:
+    name: marker_gene_recov_sw
+    description: Tools used for taxonomic marker gene extraction from assembled genomes
+    title: taxonomic marker gene recovery software
+    examples:
+    - value: rambl;v2;default parameters
+    - value: barrnap;0.9;--kingdom bac
+    - value: metaxa2;2.2;-t bacteria
+    in_subset:
+    - sequencing
+    from_schema: https://w3id.org/mixs
+    see_also:
+    - MIXS:0000066
+    aliases:
+    - x16s_recover_software
+    keywords:
+    - recover
+    - software
+    - marker gene
+    - taxonomy
+    slot_uri: MIXS:0001355
+    alias: marker_gene_recov_sw
+    owner: Mimag
+    domain_of:
+    - Mimag
+    - Misag
+    range: string
+    structured_pattern:
+      syntax: ^{software};{version};{parameters}$
+      interpolated: true
+      partial_match: true
   pos_cont_type:
     name: pos_cont_type
     description: The substance, mixture, product, or apparatus used to verify that
@@ -2422,6 +2503,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2525,6 +2607,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2562,6 +2645,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2629,6 +2713,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2674,6 +2759,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2743,6 +2829,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2781,6 +2868,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2818,6 +2906,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2859,6 +2948,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2894,6 +2984,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2935,6 +3026,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2980,6 +3072,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3029,6 +3122,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3100,6 +3194,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3139,6 +3234,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3178,6 +3274,7 @@ attributes:
     owner: Mimag
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg

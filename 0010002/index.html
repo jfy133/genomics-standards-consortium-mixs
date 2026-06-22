@@ -482,7 +482,7 @@
 </tr>
 <tr>
 <td><a href="https://w3id.org/mixs/0000024">MIXS:0000024</a></td>
-<td><a href="../0000024/">estimated_size</a></td>
+<td><a href="../0000024/">estimated_genome_size</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The estimated size of the genome prior to sequencing</td>
 </tr>
@@ -795,7 +795,7 @@ slots:
 - samp_size
 - isol_growth_condt
 - alt
-- estimated_size
+- estimated_genome_size
 - extrachrom_elements
 - source_mat_id
 - samp_vol_we_dna_ext
@@ -1036,6 +1036,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1153,6 +1154,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1252,6 +1254,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1339,6 +1342,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1379,6 +1383,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1419,6 +1424,7 @@ attributes:
     alias: isol_growth_condt
     owner: MigsEu
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1454,6 +1460,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1475,8 +1482,8 @@ attributes:
       syntax: ^{scientific_float}( *- *{scientific_float})? *{text}$
       interpolated: true
       partial_match: true
-  estimated_size:
-    name: estimated_size
+  estimated_genome_size:
+    name: estimated_genome_size
     annotations:
       Expected_value:
         tag: Expected_value
@@ -1484,7 +1491,9 @@ attributes:
     description: The estimated size of the genome prior to sequencing. Of particular
       importance in the sequencing of (eukaryotic) genome which could remain in draft
       form for a long or unspecified period
-    title: estimated size
+    title: estimated genome size
+    comments:
+    - Slot updated 2026-02-10 `estimated_size` and title 'estimated size'
     examples:
     - value: 300000 bp
     in_subset:
@@ -1494,7 +1503,7 @@ attributes:
     - size
     string_serialization: '{integer} bp'
     slot_uri: MIXS:0000024
-    alias: estimated_size
+    alias: estimated_genome_size
     owner: MigsEu
     domain_of:
     - MigsBa
@@ -1519,6 +1528,7 @@ attributes:
     alias: extrachrom_elements
     owner: MigsEu
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1558,6 +1568,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1599,6 +1610,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1763,6 +1775,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -1827,6 +1840,7 @@ attributes:
     alias: biotic_relationship
     owner: MigsEu
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsVi
@@ -1980,6 +1994,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2096,6 +2111,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2252,6 +2268,7 @@ attributes:
     alias: trophic_level
     owner: MigsEu
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MimarksC
@@ -2274,6 +2291,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2312,6 +2330,7 @@ attributes:
     alias: subspecf_gen_lin
     owner: MigsEu
     domain_of:
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2381,6 +2400,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2447,6 +2467,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2553,6 +2574,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2598,6 +2620,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2668,6 +2691,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2706,6 +2730,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2743,6 +2768,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2784,6 +2810,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2819,6 +2846,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2860,6 +2888,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2905,6 +2934,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -2954,6 +2984,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3025,6 +3056,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3063,6 +3095,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
@@ -3102,6 +3135,7 @@ attributes:
     owner: MigsEu
     domain_of:
     - MimsMisip
+    - MimarksCMisip
     - MigsBa
     - MigsEu
     - MigsOrg
